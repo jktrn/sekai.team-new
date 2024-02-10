@@ -76,52 +76,35 @@ export default function PostLayout({
                                             key={author.name}
                                         >
                                             {author.avatar && (
-                                                <Image
-                                                    src={author.avatar}
-                                                    width={38}
-                                                    height={38}
-                                                    alt="avatar"
-                                                    className="h-10 w-10 rounded-full"
-                                                />
+                                                <Link
+                                                    href={`/members/${author.slug}`}
+                                                >
+                                                    <Image
+                                                        src={author.avatar}
+                                                        width={38}
+                                                        height={38}
+                                                        alt="avatar"
+                                                        className="h-10 w-10 rounded-full"
+                                                    />
+                                                </Link>
                                             )}
                                             <dl className="whitespace-nowrap text-sm font-medium leading-5">
                                                 <dt className="sr-only">
                                                     Name
                                                 </dt>
-                                                <dd className="text-foreground">
-                                                    {author.name}
-                                                </dd>
+                                                <Link
+                                                    href={`/members/${author.slug}`}
+                                                    className="text-primary"
+                                                >
+                                                    <dd>{author.name}</dd>
+                                                </Link>
                                                 <dt className="sr-only">
-                                                    Twitter
+                                                    Description
                                                 </dt>
                                                 <dd>
-                                                    {author.twitter ? (
-                                                        <Link
-                                                            href={
-                                                                author.twitter
-                                                            }
-                                                            className="text-primary hover:brightness-125 dark:hover:brightness-125"
-                                                        >
-                                                            {author.twitter.replace(
-                                                                'https://twitter.com/',
-                                                                '@'
-                                                            )}
-                                                        </Link>
-                                                    ) : author.github ? (
-                                                        <Link
-                                                            href={author.github}
-                                                            className="text-primary hover:brightness-125 dark:hover:brightness-125"
-                                                        >
-                                                            {author.github.replace(
-                                                                'https://github.com/',
-                                                                '@'
-                                                            )}
-                                                        </Link>
-                                                    ) : (
-                                                        <span className="text-muted-foreground">
-                                                            {author.description}
-                                                        </span>
-                                                    )}
+                                                    <span className="text-muted-foreground">
+                                                        {author.description}
+                                                    </span>
                                                 </dd>
                                             </dl>
                                         </li>
