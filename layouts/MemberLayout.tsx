@@ -2,6 +2,7 @@ import SocialBar, { socialKeys } from '@/components/SocialBar'
 import { pick } from 'lodash'
 import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
+import Image from 'next/image'
 
 const specialtyColors = {
     Web: 'sky',
@@ -29,10 +30,11 @@ export default function MemberLayout({ member, children }: Props) {
     return (
         <div className="w-full p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
             <div className="flex h-full flex-col gap-6 overflow-hidden rounded-md border-2 border-border p-6 md:flex-row">
-                <img
+                <Image
                     src={avatar}
                     className="h-auto w-24 self-start rounded"
                     alt={`Profile pic of ${name}`}
+                    fill
                 />
                 <div>
                     <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">

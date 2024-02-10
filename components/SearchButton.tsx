@@ -6,13 +6,13 @@ import { Search } from 'lucide-react'
 import { Button } from './ui/button'
 
 const SearchButton = () => {
+    const { query } = useKBar()
+
     if (
         siteMetadata.search &&
         (siteMetadata.search.provider === 'algolia' ||
             siteMetadata.search.provider === 'kbar')
     ) {
-        const { query } = useKBar()
-
         return (
             <Button
                 aria-label="Search"
