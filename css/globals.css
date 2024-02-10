@@ -13,7 +13,7 @@
         --popover: 0 0% 100%;
         --popover-foreground: 0 0% 3.9%;
 
-        --primary: 0 0% 9%;
+        --primary: 181.64, 100%, 35.88%;
         --primary-foreground: 0 0% 98%;
 
         --secondary: 0 0% 96.1%;
@@ -36,7 +36,7 @@
     }
 
     .dark {
-        --background: 0 0% 3.9%;
+        --background: 0 0% 9.02%;
         --foreground: 0 0% 98%;
 
         --card: 0 0% 3.9%;
@@ -45,7 +45,7 @@
         --popover: 0 0% 3.9%;
         --popover-foreground: 0 0% 98%;
 
-        --primary: 34 54% 81%;
+        --primary: 181.55, 100%, 45.69%;
         --primary-foreground: 0 0% 9%;
 
         --secondary: 0 0% 14.9%;
@@ -75,4 +75,34 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* Overwriting pliny/search kbar */
+.bg-gray-300\/50.p-4.backdrop-blur.backdrop-filter {
+    @apply z-[2];
+}
+
+.bg-primary-600 {
+    @apply !bg-primary/25;
+}
+
+.bg-gray-300\/50 .overflow-hidden.rounded-2xl.border.border-gray-100 {
+    @apply rounded-lg border-border bg-background;
+}
+
+.bg-gray-300\/50 .space-x-4.p-4 > input {
+    @apply rounded-md text-foreground placeholder-muted-foreground;
+}
+
+.bg-gray-300\/50 .space-x-4.p-4 > input:focus {
+    @apply border-primary ring-transparent;
+}
+
+.bg-gray-300\/50 .space-x-4.p-4 > kbd {
+    @apply border-border text-muted-foreground;
+}
+
+.overflow-hidden.rounded-2xl.border.border-gray-100
+    .block.border-t.border-gray-100 {
+    @apply border-t-border text-muted-foreground;
 }

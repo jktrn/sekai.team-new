@@ -1,35 +1,62 @@
+// import Splashscreen from '@/components/Splashscreen'
+import FullLogo from '@/data/fullLogo.svg'
+import FullLogoDark from '@/data/fullLogoDark.svg'
+import contestsData from '@/data/contestsData'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
+import { allAuthors } from 'contentlayer/generated'
 
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
+    const currentMembers = allAuthors.filter((d) => !d.retired).length
     return (
         <>
-            <div className="divide-y divide-accent-foreground dark:divide-accent">
-                <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-                    <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                        Latest
-                    </h1>
-                    <p className="text-lg leading-7 text-muted-foreground">
-                        {siteMetadata.description}
+            {/* <Splashscreen /> */}
+            <div className="divide-y divide-border">
+                <div className="pb-8 pt-8 text-center">
+                    <FullLogoDark
+                        className="mx-auto mb-8 dark:hidden"
+                        aria-hidden="true"
+                        style={{
+                            width: 'clamp(35%, 400px, calc(100% - 20px))',
+                        }}
+                        alt="Project SEKAI"
+                    />
+                    <FullLogo
+                        className="mx-auto mb-8 hidden dark:block"
+                        aria-hidden="true"
+                        style={{
+                            width: 'clamp(35%, 400px, calc(100% - 20px))',
+                        }}
+                        alt="Project SEKAI"
+                    />
+                </div>
+                <div className="space-y-2 pb-8 pt-8 md:space-y-5">
+                    <p className="text-center text-lg leading-7 text-muted-foreground">
+                        <code
+                            aria-label={`Project SEKAI is a CTF team with over ${currentMembers} members and has participated in over ${contestsData.length} contests.`}
+                        >
+                            {`SEKAI{I5_\u200BA_\u200BCTF_\u200Bt3Am_\u200Bw/_\u200B${currentMembers}+_\u200BmbRs_\u200B&_\u200Bp4r71CiP4tEd_\u200Bin_\u200B${contestsData.length}+_\u200Bc0nt3Stz}`}
+                        </code>
                     </p>
                 </div>
-                <ul className="divide-y divide-accent-foreground dark:divide-accent">
+                <ul className="">
                     {!posts.length && 'No posts found.'}
-                    {posts.slice(0, MAX_DISPLAY).map((post) => {
-                        const { slug, date, title, summary, tags } = post
+                    {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+                        const { slug, date, title, tags } = frontMatter
                         return (
-                            <li key={slug} className="py-12">
+                            <li key={slug} className="py-6">
                                 <article>
                                     <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                                         <dl>
-                                            <dt className="sr-only">Published on</dt>
+                                            <dt className="sr-only">
+                                                Published on
+                                            </dt>
                                             <dd className="text-base font-medium leading-6 text-muted-foreground">
-                                                <time dateTime={date}>
-                                                    {formatDate(date, siteMetadata.locale)}
+                                                <time dateTime={date as string}>
+                                                    {formatDate(date as string)}
                                                 </time>
                                             </dd>
                                         </dl>
@@ -46,22 +73,13 @@ export default function Home({ posts }) {
                                                     </h2>
                                                     <div className="flex flex-wrap">
                                                         {tags.map((tag) => (
-                                                            <Tag key={tag} text={tag} />
+                                                            <Tag
+                                                                key={tag}
+                                                                text={tag}
+                                                            />
                                                         ))}
                                                     </div>
                                                 </div>
-                                                <div className="prose prose-sm max-w-none text-muted-foreground">
-                                                    {summary}
-                                                </div>
-                                            </div>
-                                            <div className="text-base font-medium leading-6">
-                                                <Link
-                                                    href={`/blog/${slug}`}
-                                                    className="text-primary hover:brightness-125 dark:hover:brightness-125"
-                                                    aria-label={`Read "${title}"`}
-                                                >
-                                                    Read more &rarr;
-                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -75,8 +93,8 @@ export default function Home({ posts }) {
                 <div className="flex justify-end text-base font-medium leading-6">
                     <Link
                         href="/blog"
-                        className="text-primary hover:brightness-125 dark:hover:brightness-125"
-                        aria-label="All posts"
+                        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                        aria-label="all posts"
                     >
                         All Posts &rarr;
                     </Link>

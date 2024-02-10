@@ -31,7 +31,10 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
             <nav className="flex justify-between">
                 {!prevPage && (
-                    <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
+                    <button
+                        className="cursor-auto disabled:opacity-50"
+                        disabled={!prevPage}
+                    >
                         Previous
                     </button>
                 )}
@@ -51,12 +54,18 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
                     {currentPage} of {totalPages}
                 </span>
                 {!nextPage && (
-                    <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
+                    <button
+                        className="cursor-auto disabled:opacity-50"
+                        disabled={!nextPage}
+                    >
                         Next
                     </button>
                 )}
                 {nextPage && (
-                    <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+                    <Link
+                        href={`/${basePath}/page/${currentPage + 1}`}
+                        rel="next"
+                    >
                         Next
                     </Link>
                 )}
@@ -79,7 +88,9 @@ export default function ListLayout({
 
     // If initialDisplayPosts exist, display it if no searchValue is specified
     const displayPosts =
-        initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+        initialDisplayPosts.length > 0 && !searchValue
+            ? initialDisplayPosts
+            : filteredBlogPosts
 
     return (
         <>
@@ -96,7 +107,7 @@ export default function ListLayout({
                                 type="text"
                                 onChange={(e) => setSearchValue(e.target.value)}
                                 placeholder="Search articles"
-                                className="block w-full rounded-md border border-muted-foreground bg-muted px-4 py-2 text-muted-foreground focus:border-primary focus:ring-primary dark:border-muted"
+                                className="block w-full rounded-md border border-muted-foreground bg-muted px-4 py-2 text-muted-foreground placeholder-muted-foreground focus:border-primary focus:ring-primary dark:border-muted"
                             />
                         </label>
                         <Search className="absolute right-3 top-3 h-5 w-5 text-muted-foreground" />
@@ -110,25 +121,35 @@ export default function ListLayout({
                             <li key={path} className="py-4">
                                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                                     <dl>
-                                        <dt className="sr-only">Published on</dt>
+                                        <dt className="sr-only">
+                                            Published on
+                                        </dt>
                                         <dd className="text-base font-medium leading-6 text-muted-foreground">
                                             <time dateTime={date}>
-                                                {formatDate(date, siteMetadata.locale)}
+                                                {formatDate(
+                                                    date,
+                                                    siteMetadata.locale
+                                                )}
                                             </time>
                                         </dd>
                                     </dl>
                                     <div className="space-y-3 xl:col-span-3">
                                         <div>
                                             <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                                                <Link href={`/${path}`} className="text-foreground">
+                                                <Link
+                                                    href={`/${path}`}
+                                                    className="text-foreground"
+                                                >
                                                     {title}
                                                 </Link>
                                             </h3>
                                             <div className="flex flex-wrap">
-                                                {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                                                {tags?.map((tag) => (
+                                                    <Tag key={tag} text={tag} />
+                                                ))}
                                             </div>
                                         </div>
-                                        <div className="prose prose-sm max-w-none text-muted-foreground">
+                                        <div className="prose max-w-none text-muted-foreground">
                                             {summary}
                                         </div>
                                     </div>

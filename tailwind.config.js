@@ -16,7 +16,6 @@ module.exports = {
     theme: {
         container: {
             center: true,
-            padding: '2rem',
             screens: {
                 '2xl': '1400px',
             },
@@ -29,10 +28,9 @@ module.exports = {
                 14: '3.5rem',
             },
             fontFamily: {
-                sans: ['var(--font-space-jetbrains-mono)', ...fontFamily.sans],
+                sans: ['var(--font-inter)', ...fontFamily.sans],
             },
             colors: {
-                // primary: colors.pink,
                 gray: colors.gray,
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
@@ -41,6 +39,7 @@ module.exports = {
                 foreground: 'hsl(var(--foreground))',
                 primary: {
                     DEFAULT: 'hsl(var(--primary))',
+                    // Pliny algolia dependency
                     400: 'hsl(var(--primary))',
                     500: 'hsl(var(--primary))',
                     600: 'hsl(var(--primary))',
@@ -100,9 +99,9 @@ module.exports = {
                             },
                             code: { color: theme('colors.primary.DEFAULT') },
                         },
-                        p: {
-                            fontSize: '14px',
-                        },
+                        // p: {
+                        //     fontSize: '14px',
+                        // },
                         'h1,h2': {
                             fontWeight: '700',
                             letterSpacing: theme('letterSpacing.tight'),
@@ -127,9 +126,9 @@ module.exports = {
                             },
                             code: { color: theme('colors.primary.DEFAULT') },
                         },
-                        p: {
-                            fontSize: '14px',
-                        },
+                        // p: {
+                        //     fontSize: '14px',
+                        // },
                         'h1,h2,h3,h4,h5,h6': {
                             color: theme('colors.gray.100'),
                         },

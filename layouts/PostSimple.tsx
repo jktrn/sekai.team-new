@@ -18,9 +18,18 @@ interface LayoutProps {
     prev?: { path: string; title: string }
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
+export default function PostLayout({
+    content,
+    authorDetails,
+    next,
+    prev,
+    children,
+}: LayoutProps) {
     const { path, slug, date, title, images } = content
-    const displayImage = images && images.length > 0 ? images[0] : '/static/images/twitter-card.png'
+    const displayImage =
+        images && images.length > 0
+            ? images[0]
+            : '/static/images/twitter-card.png'
 
     return (
         <>
@@ -48,7 +57,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                     <dt className="sr-only">Published on</dt>
                                     <dd className="text-base font-medium leading-6 text-muted-foreground">
                                         <time dateTime={date}>
-                                            {formatDate(date, siteMetadata.locale)}
+                                            {formatDate(
+                                                date,
+                                                siteMetadata.locale
+                                            )}
                                         </time>
                                     </dd>
                                 </div>
@@ -75,15 +87,21 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                                     />
                                                 )}
                                                 <dl className="whitespace-nowrap text-sm font-medium leading-5">
-                                                    <dt className="sr-only">Name</dt>
+                                                    <dt className="sr-only">
+                                                        Name
+                                                    </dt>
                                                     <dd className="text-foreground">
                                                         {author.name}
                                                     </dd>
-                                                    <dt className="sr-only">Twitter</dt>
+                                                    <dt className="sr-only">
+                                                        Twitter
+                                                    </dt>
                                                     <dd>
                                                         {author.twitter && (
                                                             <Link
-                                                                href={author.twitter}
+                                                                href={
+                                                                    author.twitter
+                                                                }
                                                                 className="text-primary hover:brightness-125 dark:hover:brightness-125"
                                                             >
                                                                 {author.twitter.replace(
@@ -103,7 +121,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     </header>
                     <div className="grid-rows-[auto_1fr] divide-y divide-muted-foreground pb-8 dark:divide-muted xl:divide-y-0">
                         <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
-                            <div className="prose prose-sm max-w-none pb-8 pt-10 dark:prose-invert">
+                            <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
                                 {children}
                             </div>
                         </div>

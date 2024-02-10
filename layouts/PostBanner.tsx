@@ -16,10 +16,17 @@ interface LayoutProps {
     prev?: { path: string; title: string }
 }
 
-export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
+export default function PostMinimal({
+    content,
+    next,
+    prev,
+    children,
+}: LayoutProps) {
     const { slug, title, images } = content
     const displayImage =
-        images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
+        images && images.length > 0
+            ? images[0]
+            : 'https://picsum.photos/seed/picsum/800/400'
 
     return (
         <>
@@ -43,11 +50,14 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
                             <PageTitle>{title}</PageTitle>
                         </div>
                     </div>
-                    <div className="prose prose-sm max-w-none py-4 dark:prose-invert">
+                    <div className="prose max-w-none py-4 dark:prose-invert">
                         {children}
                     </div>
                     {siteMetadata.comments && (
-                        <div className="pb-6 pt-6 text-center text-muted-foreground" id="comment">
+                        <div
+                            className="pb-6 pt-6 text-center text-muted-foreground"
+                            id="comment"
+                        >
                             <Comments slug={slug} />
                         </div>
                     )}

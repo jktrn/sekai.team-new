@@ -1,4 +1,8 @@
-import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer/source-files'
+import {
+    defineDocumentType,
+    ComputedFields,
+    makeSource,
+} from 'contentlayer/source-files'
 import { writeFileSync } from 'fs'
 import readingTime from 'reading-time'
 import GithubSlugger from 'github-slugger'
@@ -117,14 +121,25 @@ export const Authors = defineDocumentType(() => ({
     contentType: 'mdx',
     fields: {
         name: { type: 'string', required: true },
-        avatar: { type: 'string' },
+        avatar: { type: 'string', required: true },
+        description: { type: 'string', required: true },
+        specialties: { type: 'list', of: { type: 'string' } },
         occupation: { type: 'string' },
         company: { type: 'string' },
+        member: { type: 'boolean' },
+        order: { type: 'number' },
+        retired: { type: 'boolean' },
         email: { type: 'string' },
-        twitter: { type: 'string' },
-        linkedin: { type: 'string' },
         github: { type: 'string' },
-        layout: { type: 'string' },
+        facebook: { type: 'string' },
+        youtube: { type: 'string' },
+        linkedin: { type: 'string' },
+        twitter: { type: 'string' },
+        ctftime: { type: 'string' },
+        discord: { type: 'string' },
+        web: { type: 'string' },
+        hackerearth: { type: 'string' },
+        codeforces: { type: 'string' },
     },
     computedFields,
 }))

@@ -11,7 +11,9 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
-    `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
+    `https://mobile.twitter.com/search?q=${encodeURIComponent(
+        `${siteMetadata.siteUrl}/${path}`
+    )}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
     weekday: 'long',
@@ -28,7 +30,13 @@ interface LayoutProps {
     children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
+export default function PostLayout({
+    content,
+    authorDetails,
+    next,
+    prev,
+    children,
+}: LayoutProps) {
     const { filePath, path, slug, date, title, tags } = content
     const basePath = path.split('/')[0]
 
@@ -77,13 +85,21 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                                 />
                                             )}
                                             <dl className="whitespace-nowrap text-sm font-medium leading-5">
-                                                <dt className="sr-only">Name</dt>
-                                                <dd className="text-foreground">{author.name}</dd>
-                                                <dt className="sr-only">Twitter</dt>
+                                                <dt className="sr-only">
+                                                    Name
+                                                </dt>
+                                                <dd className="text-foreground">
+                                                    {author.name}
+                                                </dd>
+                                                <dt className="sr-only">
+                                                    Twitter
+                                                </dt>
                                                 <dd>
                                                     {author.twitter && (
                                                         <Link
-                                                            href={author.twitter}
+                                                            href={
+                                                                author.twitter
+                                                            }
                                                             className="text-primary hover:brightness-125 dark:hover:brightness-125"
                                                         >
                                                             {author.twitter.replace(
@@ -100,7 +116,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                             </dd>
                         </dl>
                         <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
-                            <div className="prose prose-sm max-w-none pb-8 pt-10 dark:prose-invert">
+                            <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
                                 {children}
                             </div>
                             <div className="pb-6 pt-6 text-sm text-muted-foreground">
@@ -108,7 +124,9 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                     Discuss on Twitter
                                 </Link>
                                 {` • `}
-                                <Link href={editUrl(filePath)}>View on GitHub</Link>
+                                <Link href={editUrl(filePath)}>
+                                    View on GitHub
+                                </Link>
                             </div>
                             {siteMetadata.comments && (
                                 <div
@@ -141,7 +159,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                                     Previous Article
                                                 </h2>
                                                 <div className="text-primary hover:brightness-125 dark:hover:brightness-125">
-                                                    <Link href={`/${prev.path}`}>{prev.title}</Link>
+                                                    <Link
+                                                        href={`/${prev.path}`}
+                                                    >
+                                                        {prev.title}
+                                                    </Link>
                                                 </div>
                                             </div>
                                         )}
@@ -151,7 +173,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                                     Next Article
                                                 </h2>
                                                 <div className="text-primary hover:brightness-125 dark:hover:brightness-125">
-                                                    <Link href={`/${next.path}`}>{next.title}</Link>
+                                                    <Link
+                                                        href={`/${next.path}`}
+                                                    >
+                                                        {next.title}
+                                                    </Link>
                                                 </div>
                                             </div>
                                         )}

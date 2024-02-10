@@ -1,41 +1,32 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-    title: 'enscribe.dev',
-    author: 'enscribe',
-    headerTitle: 'enscribe.dev',
-    description: 'Freelance frontend web development and cybersecurity shenanigans',
+    title: 'Project SEKAI',
+    author: 'Project SEKAI',
+    headerTitle: 'Project SEKAI',
+    description: 'Website of Project SEKAI, yet another CTF team.',
     language: 'en-us',
     theme: 'dark', // system, dark or light
-    siteUrl: 'https://test-blog-v2-jktrn.vercel.app/',
-    siteRepo: 'https://github.com/jktrn/enscribe.dev-v2',
-    siteLogo: '/static/images/logo.png',
-    socialBanner: '/static/images/twitter-card.png',
-    // mastodon: 'https://mastodon.social/@mastodonuser',
-    email: 'jason@enscribe.dev',
-    github: 'https://github.com/jktrn',
-    twitter: 'https://twitter.com/enscry',
-    // facebook: 'https://facebook.com',
-    // youtube: 'https://youtube.com',
-    // linkedin: 'https://www.linkedin.com',
+    siteUrl: 'https://sekai.team',
+    siteRepo: 'https://github.com/blueset/sekai.team',
+    siteLogo: '/static/images/fullLogo.svg',
+    image: '/static/images/avatar.png',
+    socialBanner: '/static/images/twitter-card.png?v=2',
+    email: 'project.sekai@sekai.team',
+    github: 'https://github.com/project-sekai-ctf',
+    twitter: 'https://twitter.com/ProjectSEKAIctf',
+    facebook: '',
+    youtube: '',
+    linkedin: 'https://www.linkedin.com/company/project-sekai-ctf/',
+    ctftime: 'https://ctftime.org/team/169557',
+    discord: '',
     locale: 'en-US',
+    dateLocale: 'en-GB',
     analytics: {
-        // If you want to use an analytics provider you have to add it to the
-        // content security policy in the `next.config.js` file.
-        // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
-        // umamiAnalytics: {
-        //     // We use an env variable for this site to avoid other users cloning our analytics ID
-        //     umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
-        // },
-        // plausibleAnalytics: {
-        //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-        // },
-        // simpleAnalytics: {},
-        // posthogAnalytics: {
-        //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-        // },
-        // googleAnalytics: {
-        //   googleAnalyticsId: '', // e.g. G-XXXXXXX
-        // },
+        // supports plausible, simpleAnalytics or googleAnalytics
+        plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+        simpleAnalytics: false, // true or false
+        googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+        cloudflareAnalytics: 'a743232028f24754b6bbe0b63373fc97',
     },
     // newsletter: {
     //     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus

@@ -1,20 +1,27 @@
-import { AlgoliaButton } from 'pliny/search/AlgoliaButton'
-import { KBarButton } from 'pliny/search/KBarButton'
+'use client'
+
+import { useKBar } from 'kbar'
 import siteMetadata from '@/data/siteMetadata'
 import { Search } from 'lucide-react'
+import { Button } from './ui/button'
 
 const SearchButton = () => {
     if (
         siteMetadata.search &&
-        (siteMetadata.search.provider === 'algolia' || siteMetadata.search.provider === 'kbar')
+        (siteMetadata.search.provider === 'algolia' ||
+            siteMetadata.search.provider === 'kbar')
     ) {
-        const SearchButtonWrapper =
-            siteMetadata.search.provider === 'algolia' ? AlgoliaButton : KBarButton
+        const { query } = useKBar()
 
         return (
-            <SearchButtonWrapper aria-label="Search">
+            <Button
+                aria-label="Search"
+                variant="ghost"
+                className="px-2"
+                onClick={() => query.toggle()}
+            >
                 <Search />
-            </SearchButtonWrapper>
+            </Button>
         )
     }
 }

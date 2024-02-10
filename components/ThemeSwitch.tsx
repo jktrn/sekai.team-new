@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
+import { Button } from './ui/button'
 
 const ThemeSwitch = () => {
     const [mounted, setMounted] = useState(false)
@@ -16,12 +17,14 @@ const ThemeSwitch = () => {
     }
 
     return (
-        <button
+        <Button
             aria-label="Toggle Dark Mode"
+            variant="ghost"
+            className="px-2"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
             {mounted && theme === 'dark' ? <Sun /> : <Moon />}
-        </button>
+        </Button>
     )
 }
 

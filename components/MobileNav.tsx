@@ -1,70 +1,44 @@
 'use client'
 
-import { useState } from 'react'
-import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { Menu } from 'lucide-react'
 
+import Link from './Link'
+import { Button } from './ui/button'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from './ui/dropdown-menu'
+
 const MobileNav = () => {
-    const [navShow, setNavShow] = useState(false)
-
-    const onToggleNav = () => {
-        setNavShow((status) => {
-            if (status) {
-                document.body.style.overflow = 'auto'
-            } else {
-                // Prevent scrolling
-                document.body.style.overflow = 'hidden'
-            }
-            return !status
-        })
-    }
-
     return (
-        <>
-            <button className="sm:hidden" aria-label="Toggle Menu" onClick={onToggleNav}>
-                <Menu />
-            </button>
-            <div
-                className={`fixed left-0 top-[3.75rem] z-50 h-screen w-full transform bg-background opacity-95 duration-300 ease-in-out ${
-                    navShow ? 'translate-x-0' : 'translate-x-full'
-                }`}
-            >
-                <div className="flex justify-end">
-                    <button
-                        className="mr-8 mt-11 h-8 w-8"
-                        aria-label="Toggle Menu"
-                        onClick={onToggleNav}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            className="text-foreground"
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button
+                    className="p-2 sm:hidden"
+                    aria-label="Toggle menu"
+                    variant="ghost"
+                >
+                    <span className="sr-only">Toggle menu</span>
+                    <Menu />
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[10rem]">
+                {headerNavLinks.map((link) => (
+                    <DropdownMenuItem key={link.title} asChild>
+                        <Link
+                            href={link.href}
+                            className="flex items-center gap-4"
                         >
-                            <path
-                                fillRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <nav className="fixed mt-8 w-full">
-                    {headerNavLinks.map((link) => (
-                        <div key={link.title} className="px-12 py-4">
-                            <Link
-                                href={link.href}
-                                className="text-2xl font-bold tracking-widest text-foreground"
-                                onClick={onToggleNav}
-                            >
-                                {link.title}
-                            </Link>
-                        </div>
-                    ))}
-                </nav>
-            </div>
-        </>
+                            {/* {link.icon} */}
+                            <div>{link.title}</div>
+                        </Link>
+                    </DropdownMenuItem>
+                ))}
+            </DropdownMenuContent>
+        </DropdownMenu>
     )
 }
 

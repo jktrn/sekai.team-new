@@ -9,7 +9,16 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-    const { name, avatar, occupation, company, email, twitter, linkedin, github } = content
+    const {
+        name,
+        avatar,
+        occupation,
+        company,
+        email,
+        twitter,
+        linkedin,
+        github,
+    } = content
 
     return (
         <>
@@ -33,7 +42,9 @@ export default function AuthorLayout({ children, content }: Props) {
                         <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">
                             {name}
                         </h3>
-                        <div className="text-muted-foreground">{occupation}</div>
+                        <div className="text-muted-foreground">
+                            {occupation}
+                        </div>
                         <div className="text-muted-foreground">{company}</div>
                         <div className="flex space-x-3 pt-6">
                             {twitter && (
@@ -70,7 +81,7 @@ export default function AuthorLayout({ children, content }: Props) {
                             )}
                         </div>
                     </div>
-                    <div className="prose prose-sm max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
+                    <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
                         {children}
                     </div>
                 </div>
