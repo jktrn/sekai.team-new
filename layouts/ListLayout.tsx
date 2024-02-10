@@ -18,7 +18,7 @@ interface PaginationProps {
 }
 interface ListLayoutProps {
     posts: CoreContent<Blog>[]
-    title: string
+    title?: string
     initialDisplayPosts?: CoreContent<Blog>[]
     pagination?: PaginationProps
 }
@@ -99,7 +99,7 @@ export default function ListLayout({
             <div className="divide-y divide-accent-foreground dark:divide-accent">
                 <div className="space-y-2 pb-8 pt-6 md:space-y-5">
                     <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                        {title}
+                        {title && title}
                     </h1>
                     <div className="relative w-full">
                         <label>
