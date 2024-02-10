@@ -1,5 +1,3 @@
-'use client'
-
 import ContestCard from '@/components/ContestCard'
 import contestsData from '@/data/contestsData'
 import { genPageMetadata } from 'app/seo'

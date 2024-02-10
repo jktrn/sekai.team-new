@@ -1,3 +1,5 @@
+'use client'
+
 import Link from './Link'
 import { ContestData } from '@/data/contestsData'
 import { useState } from 'react'
