@@ -34,7 +34,9 @@ export default function MemberLayout({ member, children }: Props) {
                     src={avatar}
                     className="h-auto w-24 self-start rounded"
                     alt={`Profile pic of ${name}`}
-                    fill
+                    width={96}
+                    height={96}
+                    unoptimized
                 />
                 <div>
                     <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
