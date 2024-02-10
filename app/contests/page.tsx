@@ -15,7 +15,7 @@ export default function Contests() {
                         Contests
                     </h1>
                     <p className="text-lg leading-7 text-muted-foreground">
-                        CTFs and other contests we have participated in
+                        CTFs we have participated in.
                     </p>
                 </div>
                 <div className="container py-12">
