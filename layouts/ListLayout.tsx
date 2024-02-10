@@ -5,10 +5,12 @@ import { usePathname } from 'next/navigation'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
+import { allAuthors } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { Search } from 'lucide-react'
+import Image from 'next/image'
 
 interface PaginationProps {
     totalPages: number
@@ -116,7 +118,25 @@ export default function ListLayout({
                 <ul>
                     {!filteredBlogPosts.length && 'No posts found.'}
                     {displayPosts.map((post) => {
-                        const { path, date, title, summary, tags } = post
+                        const { path, date, title, authors, summary, tags } =
+                            post
+                        const authorSlug =
+                            authors && authors.length > 0
+                                ? authors[0]
+                                : undefined
+
+                        const authorDetails = authorSlug
+                            ? allAuthors.find(
+                                  (author) => author.slug === authorSlug
+                              )
+                            : undefined
+
+                        const finalAuthorDetails = authorDetails ?? {
+                            name: siteMetadata.author,
+                            avatar: siteMetadata.image,
+                            slug: siteMetadata.author,
+                        }
+
                         return (
                             <li key={path} className="py-4">
                                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -143,7 +163,27 @@ export default function ListLayout({
                                                     {title}
                                                 </Link>
                                             </h3>
-                                            <div className="flex flex-wrap">
+                                            <div className="flex flex-wrap items-center">
+                                                <Image
+                                                    src={
+                                                        finalAuthorDetails.avatar
+                                                    }
+                                                    alt={
+                                                        finalAuthorDetails.name
+                                                    }
+                                                    width={24}
+                                                    height={24}
+                                                    className="rounded-full"
+                                                />
+                                                <Link
+                                                    href={`/members/${finalAuthorDetails.slug}`}
+                                                    className="pl-2 pr-1 text-primary"
+                                                >
+                                                    {finalAuthorDetails.name}
+                                                </Link>
+                                                <span className="pr-1 text-muted-foreground">
+                                                    –
+                                                </span>
                                                 {tags?.map((tag) => (
                                                     <Tag key={tag} text={tag} />
                                                 ))}

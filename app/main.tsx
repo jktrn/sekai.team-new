@@ -6,6 +6,8 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { formatDate } from 'pliny/utils/formatDate'
 import { allAuthors } from 'contentlayer/generated'
+import siteMetadata from '@/data/siteMetadata'
+import Image from 'next/image'
 
 const MAX_DISPLAY = 5
 
@@ -45,7 +47,24 @@ export default function Home({ posts }) {
                 <ul className="">
                     {!posts.length && 'No posts found.'}
                     {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-                        const { slug, date, title, tags } = frontMatter
+                        const { slug, date, title, tags, authors } = frontMatter
+                        const authorSlug =
+                            authors && authors.length > 0
+                                ? authors[0]
+                                : undefined
+
+                        const authorDetails = authorSlug
+                            ? allAuthors.find(
+                                  (author) => author.slug === authorSlug
+                              )
+                            : undefined
+
+                        const finalAuthorDetails = authorDetails ?? {
+                            name: siteMetadata.author,
+                            avatar: siteMetadata.image,
+                            slug: siteMetadata.author,
+                        }
+
                         return (
                             <li key={slug} className="py-6">
                                 <article>
@@ -71,7 +90,38 @@ export default function Home({ posts }) {
                                                             {title}
                                                         </Link>
                                                     </h2>
-                                                    <div className="flex flex-wrap">
+                                                    <div className="flex flex-wrap items-center">
+                                                        <Image
+                                                            src={
+                                                                finalAuthorDetails.avatar
+                                                            }
+                                                            alt={
+                                                                finalAuthorDetails.name
+                                                            }
+                                                            width={24}
+                                                            height={24}
+                                                            className="rounded-full"
+                                                        />
+                                                        {finalAuthorDetails.name !==
+                                                        siteMetadata.author ? (
+                                                            <Link
+                                                                href={`/members/${finalAuthorDetails.slug}`}
+                                                                className="pl-2 pr-1 text-primary"
+                                                            >
+                                                                {
+                                                                    finalAuthorDetails.name
+                                                                }
+                                                            </Link>
+                                                        ) : (
+                                                            <span className="pl-2 pr-1 text-primary">
+                                                                {
+                                                                    finalAuthorDetails.name
+                                                                }
+                                                            </span>
+                                                        )}
+                                                        <span className="pr-1 text-muted-foreground">
+                                                            –
+                                                        </span>
                                                         {tags.map((tag) => (
                                                             <Tag
                                                                 key={tag}

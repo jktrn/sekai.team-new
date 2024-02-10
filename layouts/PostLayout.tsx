@@ -37,7 +37,7 @@ export default function PostLayout({
     prev,
     children,
 }: LayoutProps) {
-    const { filePath, path, slug, date, title, tags } = content
+    const { filePath, path, slug, date, title, tags, canonicalUrl } = content
     const basePath = path.split('/')[0]
 
     return (
@@ -95,7 +95,7 @@ export default function PostLayout({
                                                     Twitter
                                                 </dt>
                                                 <dd>
-                                                    {author.twitter && (
+                                                    {author.twitter ? (
                                                         <Link
                                                             href={
                                                                 author.twitter
@@ -107,6 +107,20 @@ export default function PostLayout({
                                                                 '@'
                                                             )}
                                                         </Link>
+                                                    ) : author.github ? (
+                                                        <Link
+                                                            href={author.github}
+                                                            className="text-primary hover:brightness-125 dark:hover:brightness-125"
+                                                        >
+                                                            {author.github.replace(
+                                                                'https://github.com/',
+                                                                '@'
+                                                            )}
+                                                        </Link>
+                                                    ) : (
+                                                        <span className="text-muted-foreground">
+                                                            {author.description}
+                                                        </span>
                                                     )}
                                                 </dd>
                                             </dl>
@@ -119,26 +133,21 @@ export default function PostLayout({
                             <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
                                 {children}
                             </div>
-                            <div className="pb-6 pt-6 text-sm text-muted-foreground">
-                                <Link href={discussUrl(path)} rel="nofollow">
-                                    Discuss on Twitter
-                                </Link>
-                                {` • `}
-                                <Link href={editUrl(filePath)}>
-                                    View on GitHub
-                                </Link>
-                            </div>
-                            {siteMetadata.comments && (
-                                <div
-                                    className="pb-6 pt-6 text-center text-muted-foreground"
-                                    id="comment"
-                                >
-                                    <Comments slug={slug} />
-                                </div>
-                            )}
                         </div>
                         <footer>
                             <div className="divide-muted-foreground text-sm font-medium leading-5 dark:divide-muted xl:col-start-1 xl:row-start-2 xl:divide-y">
+                                {canonicalUrl && (
+                                    <div className="py-4 xl:py-8">
+                                        <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
+                                            Originally published on
+                                        </h2>
+                                        <div className="flex flex-wrap text-primary">
+                                            <Link href={canonicalUrl}>
+                                                {new URL(canonicalUrl).hostname}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
                                 {tags && (
                                     <div className="py-4 xl:py-8">
                                         <h2 className="text-xs uppercase tracking-wide text-muted-foreground">

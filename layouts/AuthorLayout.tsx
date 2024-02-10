@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import { Twitter, Mail, Github, Linkedin } from 'lucide-react'
 import Image from '@/components/Image'
+import SocialIcon from '@/components/social-icons'
 
 interface Props {
     children: ReactNode
@@ -18,6 +19,7 @@ export default function AuthorLayout({ children, content }: Props) {
         twitter,
         linkedin,
         github,
+        web,
     } = content
 
     return (
@@ -25,7 +27,7 @@ export default function AuthorLayout({ children, content }: Props) {
             <div className="divide-y divide-accent-foreground dark:divide-accent">
                 <div className="space-y-2 pb-8 pt-6 md:space-y-5">
                     <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                        About
+                        {name}
                     </h1>
                 </div>
                 <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -46,39 +48,12 @@ export default function AuthorLayout({ children, content }: Props) {
                             {occupation}
                         </div>
                         <div className="text-muted-foreground">{company}</div>
-                        <div className="flex space-x-3 pt-6">
-                            {twitter && (
-                                <a
-                                    href={twitter}
-                                    className="hover:brightness-125 dark:hover:brightness-125"
-                                >
-                                    <Twitter size={24} />
-                                </a>
-                            )}
-                            {email && (
-                                <a
-                                    href={`mailto:${email}`}
-                                    className="hover:brightness-125 dark:hover:brightness-125"
-                                >
-                                    <Mail size={24} />
-                                </a>
-                            )}
-                            {github && (
-                                <a
-                                    href={github}
-                                    className="hover:brightness-125 dark:hover:brightness-125"
-                                >
-                                    <Github size={24} />
-                                </a>
-                            )}
-                            {linkedin && (
-                                <a
-                                    href={linkedin}
-                                    className="hover:brightness-125 dark:hover:brightness-125"
-                                >
-                                    <Linkedin size={24} />
-                                </a>
-                            )}
+                        <div className="flex space-x-3">
+                            <SocialIcon kind="mail" href={`mailto:${email}`} />
+                            <SocialIcon kind="github" href={github} />
+                            <SocialIcon kind="linkedin" href={linkedin} />
+                            <SocialIcon kind="twitter" href={twitter} />
+                            <SocialIcon kind="web" href={web} />
                         </div>
                     </div>
                     <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">

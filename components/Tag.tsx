@@ -1,16 +1,17 @@
 import Link from 'next/link'
 import { slug } from 'github-slugger'
+import { Badge } from './ui/badge'
+
 interface Props {
     text: string
 }
 
 const Tag = ({ text }: Props) => {
     return (
-        <Link
-            href={`/tags/${slug(text)}`}
-            className="mr-3 text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
-        >
-            {text.split(' ').join('-')}
+        <Link href={`/tags/${slug(text)}`}>
+            <Badge className="mb-1 mr-1 bg-secondary font-normal uppercase text-foreground">
+                {text.split(' ').join('-')}
+            </Badge>
         </Link>
     )
 }
