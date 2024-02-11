@@ -4,21 +4,8 @@ import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import Image from 'next/image'
 import { allBlogs } from 'contentlayer/generated'
-
-const specialtyColors = {
-    Web: 'sky',
-    Crypto: 'amber',
-    Pwn: 'rose',
-    Reverse: 'yellow',
-    Forensics: 'pink',
-    Misc: 'red',
-    OSINT: 'gray',
-}
-
-// Generates a list of classes to keep
-const keepClasses = (
-    <span className="bg-amber-700 bg-gray-700 bg-green-700 bg-pink-700 bg-purple-700 bg-red-700 bg-rose-700 bg-sky-700 bg-yellow-700" />
-)
+import clsx from 'clsx'
+import { specialtyColors } from '@/scripts/utils'
 
 interface Props {
     member: Authors
@@ -51,9 +38,20 @@ export default function MemberLayout({ member, children }: Props) {
                             specialties.map((specialty) => (
                                 <span
                                     key={specialty}
-                                    className={`inline-block rounded-full px-3 py-1 text-white bg-${
-                                        specialtyColors[specialty] ?? 'green'
-                                    }-700`}
+                                    className={clsx(
+                                        'inline-block rounded-full px-3 py-1 text-foreground',
+                                        specialtyColors[specialty.toLowerCase()]
+                                            ? `bg-${
+                                                  specialtyColors[
+                                                      specialty.toLowerCase()
+                                                  ]
+                                              }-300 dark:bg-${
+                                                  specialtyColors[
+                                                      specialty.toLowerCase()
+                                                  ]
+                                              }-700`
+                                            : 'bg-secondary'
+                                    )}
                                 >
                                     {specialty}
                                 </span>
@@ -64,11 +62,11 @@ export default function MemberLayout({ member, children }: Props) {
                             <i>(Placeholder) Member of Project SEKAI.</i>
                         )}
                     </p>
-                    <span className="flex w-full justify-between">
+                    <span className="flex flex-col justify-between gap-3 xl:flex-row">
                         <SocialBar {...socialLinks} size={5} />
                         {hasWriteups && (
                             <a
-                                href={`/members/${name.toLowerCase()}`}
+                                href={`/members/${slug}`}
                                 className="text-primary"
                             >
                                 View writeups &rarr;

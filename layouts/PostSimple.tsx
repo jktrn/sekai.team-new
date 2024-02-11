@@ -102,7 +102,7 @@ export default function PostLayout({
                                                                 href={
                                                                     author.twitter
                                                                 }
-                                                                className="text-primary hover:brightness-125 dark:hover:brightness-125"
+                                                                className="text-primary hover:brightness-125"
                                                             >
                                                                 {author.twitter.replace(
                                                                     'https://twitter.com/',
@@ -139,7 +139,7 @@ export default function PostLayout({
                                     <div className="pt-4 xl:pt-8">
                                         <Link
                                             href={`/${prev.path}`}
-                                            className="text-primary hover:brightness-125 dark:hover:brightness-125"
+                                            className="text-primary hover:brightness-125"
                                             aria-label={`Previous post: ${prev.title}`}
                                         >
                                             &larr; {prev.title}
@@ -150,7 +150,7 @@ export default function PostLayout({
                                     <div className="pt-4 xl:pt-8">
                                         <Link
                                             href={`/${next.path}`}
-                                            className="text-primary hover:brightness-125 dark:hover:brightness-125"
+                                            className="text-primary hover:brightness-125"
                                             aria-label={`Next post: ${next.title}`}
                                         >
                                             {next.title} &rarr;

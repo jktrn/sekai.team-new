@@ -3,6 +3,8 @@ import type { Authors } from 'contentlayer/generated'
 import { Twitter, Mail, Github, Linkedin } from 'lucide-react'
 import Image from '@/components/Image'
 import SocialIcon from '@/components/social-icons'
+import clsx from 'clsx'
+import { specialtyColors } from '@/scripts/utils'
 
 interface Props {
     children: ReactNode
@@ -13,6 +15,7 @@ export default function AuthorLayout({ children, content }: Props) {
     const {
         name,
         avatar,
+        specialties,
         occupation,
         company,
         email,
@@ -56,8 +59,46 @@ export default function AuthorLayout({ children, content }: Props) {
                             <SocialIcon kind="web" href={web} />
                         </div>
                     </div>
-                    <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
-                        {children}
+                    <div className="flex flex-col gap-3 pb-8 pt-8">
+                        <div>
+                            <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                                Specialties
+                            </span>
+                            <div className="flex flex-wrap items-center space-x-2">
+                                {specialties &&
+                                    specialties.map((specialty) => (
+                                        <span
+                                            key={specialty}
+                                            className={clsx(
+                                                'inline-block rounded-full px-3 py-1 text-foreground',
+                                                specialtyColors[
+                                                    specialty.toLowerCase()
+                                                ]
+                                                    ? `bg-${
+                                                          specialtyColors[
+                                                              specialty.toLowerCase()
+                                                          ]
+                                                      }-300 dark:bg-${
+                                                          specialtyColors[
+                                                              specialty.toLowerCase()
+                                                          ]
+                                                      }-700`
+                                                    : 'bg-secondary'
+                                            )}
+                                        >
+                                            {specialty}
+                                        </span>
+                                    ))}
+                            </div>
+                        </div>
+                        <div>
+                            <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                                Description
+                            </span>
+                            <div className="prose max-w-none dark:prose-invert xl:col-span-2">
+                                {children}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

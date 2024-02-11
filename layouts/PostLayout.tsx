@@ -84,11 +84,11 @@ export default function PostLayout({
                                                         width={38}
                                                         height={38}
                                                         alt="avatar"
-                                                        className="h-10 w-10 rounded-full"
+                                                        className="max-w-12 max-h-12 rounded-full object-cover"
                                                     />
                                                 </Link>
                                             )}
-                                            <dl className="whitespace-nowrap text-sm font-medium leading-5">
+                                            <dl className="text-sm font-medium leading-5">
                                                 <dt className="sr-only">
                                                     Name
                                                 </dt>
@@ -150,7 +150,7 @@ export default function PostLayout({
                                                 <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
                                                     Previous Article
                                                 </h2>
-                                                <div className="text-primary hover:brightness-125 dark:hover:brightness-125">
+                                                <div className="text-primary hover:brightness-125">
                                                     <Link
                                                         href={`/${prev.path}`}
                                                     >
@@ -164,7 +164,7 @@ export default function PostLayout({
                                                 <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
                                                     Next Article
                                                 </h2>
-                                                <div className="text-primary hover:brightness-125 dark:hover:brightness-125">
+                                                <div className="text-primary hover:brightness-125">
                                                     <Link
                                                         href={`/${next.path}`}
                                                     >
@@ -179,7 +179,7 @@ export default function PostLayout({
                             <div className="pt-4 xl:pt-8">
                                 <Link
                                     href={`/${basePath}`}
-                                    className="text-primary hover:brightness-125 dark:hover:brightness-125"
+                                    className="text-primary hover:brightness-125"
                                     aria-label="Back to the blog"
                                 >
                                     &larr; Back to the blog

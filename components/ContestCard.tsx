@@ -91,7 +91,7 @@ const ContestCard = ({
                     {ctftimeId && (
                         <Link
                             href={`https://ctftime.org/event/${ctftimeId}`}
-                            className="mr-2 text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                            className="mr-2 text-base font-medium leading-6 text-primary"
                             aria-label={`CTFTime Link to ${name}`}
                         >
                             View on CTFTime &rarr;
@@ -100,7 +100,7 @@ const ContestCard = ({
                     {writeupTag && (
                         <Link
                             href={`/tags/${writeupTag}`}
-                            className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                            className="text-base font-medium leading-6 text-primary"
                             aria-label={`Writeups of ${name}`}
                         >
                             Our writeups &rarr;

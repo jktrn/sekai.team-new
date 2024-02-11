@@ -35,7 +35,7 @@ const SocialBar = ({
     size,
 }: SocialBarProps) => {
     return (
-        <div className="mb-3 flex space-x-4">
+        <div className="flex space-x-4">
             <SocialIcon kind="web" href={web} size={size ?? 6} />
             <SocialIcon kind="mail" href={`mailto:${email}`} size={size ?? 6} />
             <SocialIcon kind="github" href={github} size={size ?? 6} />
