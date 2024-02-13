@@ -116,7 +116,11 @@ export default function ListLayout({
                     </div>
                 </div>
                 <ul>
-                    {!filteredBlogPosts.length && 'No posts found.'}
+                    {!filteredBlogPosts.length && (
+                        <div className="mt-4 text-muted-foreground">
+                            No posts found.
+                        </div>
+                    )}
                     {displayPosts.map((post) => {
                         const { path, date, title, authors, summary, tags } =
                             post

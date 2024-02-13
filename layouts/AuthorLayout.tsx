@@ -34,7 +34,7 @@ export default function AuthorLayout({ children, content }: Props) {
                     </h1>
                 </div>
                 <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-                    <div className="flex flex-col items-center space-x-2 pt-8">
+                    <div className="flex flex-col items-center pt-8">
                         {avatar && (
                             <Image
                                 src={avatar}
@@ -59,8 +59,8 @@ export default function AuthorLayout({ children, content }: Props) {
                             <SocialIcon kind="web" href={web} />
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3 pb-8 pt-8">
-                        <div>
+                    <div className="flex flex-col gap-6 pb-8 pt-8">
+                        <div className="flex flex-col gap-1">
                             <span className="text-xs uppercase tracking-wide text-muted-foreground">
                                 Specialties
                             </span>
@@ -91,7 +91,7 @@ export default function AuthorLayout({ children, content }: Props) {
                                     ))}
                             </div>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-1">
                             <span className="text-xs uppercase tracking-wide text-muted-foreground">
                                 Description
                             </span>

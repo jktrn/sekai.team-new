@@ -42,9 +42,5 @@
         "**/*.json",
         ".next/types/**/*.ts"
     ],
-    "exclude": [
-        "node_modules",
-        ".next",
-        ".contentlayer"
-    ]
+    "exclude": ["node_modules", ".next", ".contentlayer"]
 }

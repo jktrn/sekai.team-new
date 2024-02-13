@@ -1,3 +1,4 @@
+import MembersTable from '@/components/MembersTable'
 import {
     Accordion,
     AccordionContent,
@@ -22,8 +23,11 @@ export default function Projects() {
                         Current active players in the team.
                     </p>
                 </div>
-                <div className="container py-12">
-                    <div className="-m-4 flex flex-wrap place-items-stretch">
+                <div className="container hidden py-12 md:block">
+                    <MembersTable />
+                </div>
+                <div className="container block py-12 md:hidden">
+                    <div className="-m-4 mb-4 flex flex-wrap place-items-stretch">
                         {allAuthors
                             .filter((d) => !d.retired)
                             .filter((d) => d.name !== 'Project SEKAI')
@@ -40,40 +44,40 @@ export default function Projects() {
                                 </MemberLayout>
                             ))}
                     </div>
+                    <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-2xl font-bold">
+                                Retired members
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                <div className="container py-6">
+                                    <div className="-m-4 flex flex-wrap place-items-stretch">
+                                        {allAuthors
+                                            .filter((d) => d.retired)
+                                            .sort(
+                                                (a, b) =>
+                                                    (a.order == undefined
+                                                        ? Infinity
+                                                        : a.order) -
+                                                    (b.order == undefined
+                                                        ? Infinity
+                                                        : b.order)
+                                            )
+                                            .map((member) => (
+                                                <MemberLayout
+                                                    member={member}
+                                                    key={member.name}
+                                                >
+                                                    {member.description}
+                                                </MemberLayout>
+                                            ))}
+                                    </div>
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
                 </div>
             </div>
-            <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                    <AccordionTrigger className="text-2xl font-bold">
-                        Retired members
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        <div className="container py-6">
-                            <div className="-m-4 flex flex-wrap place-items-stretch">
-                                {allAuthors
-                                    .filter((d) => d.retired)
-                                    .sort(
-                                        (a, b) =>
-                                            (a.order == undefined
-                                                ? Infinity
-                                                : a.order) -
-                                            (b.order == undefined
-                                                ? Infinity
-                                                : b.order)
-                                    )
-                                    .map((member) => (
-                                        <MemberLayout
-                                            member={member}
-                                            key={member.name}
-                                        >
-                                            {member.description}
-                                        </MemberLayout>
-                                    ))}
-                            </div>
-                        </div>
-                    </AccordionContent>
-                </AccordionItem>
-            </Accordion>
         </>
     )
 }
