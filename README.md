@@ -21,13 +21,13 @@ Feature request? Check the past discussions to see if it has been brought up pre
 
 ## Examples V2
 
--   [Demo Blog](https://tailwind-nextjs-starter-blog.vercel.app/) - this repo
--   [My personal blog](https://www.timlrx.com) - modified to auto-generate blog posts with dates
--   [ben.codes blog](https://ben.codes) - Benoit's personal blog about software development ([source code](https://github.com/bendotcodes/bendotcodes))
--   [tsix blog](https://tsix.top) - A front-end engineer is used to record some knowledge points in work and study _中文_
--   [SOTO's Blog](https://www.atksoto.com/) - A more personalized personal website upgraded from V1 ([source code](https://github.com/acsoto/soto-blog-nextjs))
--   [Prabhu's Blog](https://prabhukirankonda.vercel.app) - Prabhu's Personal website with blog ([source code](https://github.com/prabhukiran8790/prabhukirankonda))
--   [Rabby Hasan's Blog](https://blog.rabbyhasan.com.bd/) - Rabby Hasan's personal blog about full stack development with cloud ([source code](https://github.com/rabbyalone/myblog))
+- [Demo Blog](https://tailwind-nextjs-starter-blog.vercel.app/) - this repo
+- [My personal blog](https://www.timlrx.com) - modified to auto-generate blog posts with dates
+- [ben.codes blog](https://ben.codes) - Benoit's personal blog about software development ([source code](https://github.com/bendotcodes/bendotcodes))
+- [tsix blog](https://tsix.top) - A front-end engineer is used to record some knowledge points in work and study _中文_
+- [SOTO's Blog](https://www.atksoto.com/) - A more personalized personal website upgraded from V1 ([source code](https://github.com/acsoto/soto-blog-nextjs))
+- [Prabhu's Blog](https://prabhukirankonda.vercel.app) - Prabhu's Personal website with blog ([source code](https://github.com/prabhukiran8790/prabhukirankonda))
+- [Rabby Hasan's Blog](https://blog.rabbyhasan.com.bd/) - Rabby Hasan's personal blog about full stack development with cloud ([source code](https://github.com/rabbyalone/myblog))
 
 Using the template? Feel free to create a PR and add your blog to this list.
 
@@ -37,38 +37,38 @@ Using the template? Feel free to create a PR and add your blog to this list.
 
 Thanks to the community of users and contributors to the template! We are no longer accepting new blog listings over here. If you have updated from version 1 to version 2, feel free to remove your blog from this list and add it to the one above.
 
--   [Aloisdg's cookbook](https://tambouille.vercel.app/) - with pictures and recipes!
--   [GautierArcin's demo with next translate](https://tailwind-nextjs-starter-blog-seven.vercel.app/) - includes translation of mdx posts, [source code](https://github.com/GautierArcin/tailwind-nextjs-starter-blog/tree/demo/next-translate)
--   [David Levai's digital garden](https://davidlevai.com/) - customized design and added email subscriptions
--   [Leo's Blog](https://leohuynh.dev) - Tuan Anh Huynh's personal site. Add Snippets Page, Author Profile Card, Image Lightbox, ...
--   [thvu.dev](https://thvu.dev) - Added `mdx-embed`, view count, reading minutes and more.
--   [irvin.dev](https://www.irvin.dev/) - Irvin Lin's personal site. Added YouTube embedding.
--   [KirillSo.com](https://www.kirillso.com/) - Personal blog & website.
--   [slightlysharpe.com](https://slightlysharpe.com) - [Tincre's](https://tincre.com) main company blog
--   [blog.b00st.com](https://blog.b00st.com) - [b00st.com's](https://b00st.com) main music promotion blog
--   [astrosaurus.me](https://astrosaurus.me/) - Ephraim Atta-Duncan's Personal Blog
--   [dhanrajsp.me](https://dhanrajsp.me/) - Dhanraj's personal site and blog.
--   [blog.r00ks.io](https://blog.r00ks.io/) - Austin Rooks's personal blog ([source code](https://github.com/Austionian/blog.r00ks)).
--   [honghong.me](https://honghong.me) - Tszhong's personal website ([source code](https://github.com/tszhong0411/home))
--   [marceloformentao.dev](https://marceloformentao.dev) - Marcelo Formentão personal website ([source code](https://github.com/marceloavf/marceloformentao.dev)).
--   [abiraja.com](https://www.abiraja.com/) - with a [runnable JS code snippet component!](https://www.abiraja.com/blog/querying-solana-blockchain)
--   [bpiggin.com](https://www.bpiggin.com) - Ben Piggin's personal blog
--   [maqib.cn](https://maqib.cn) - A blog of Chinese front-end developers 狂奔小马的博客 ([源码](https://github.com/maqi1520/nextjs-tailwind-blog))
--   [ambilena.com](https://ambilena.com/) - Electronic Music Blog & imprint for upcoming musicians.
--   [dalelarroder.com](https://dalelarroder.com) - Dale Larroder's personal website and blog ([source code](https://github.com/dlarroder/dalelarroder))
--   [0xchai.io](https://0xchai.io) - Chai's personal blog
--   [techipedia](https://techipedia.vercel.app) - Simple blogging progressive web app with custom installation button and top progress bar
--   [reubence.com](https://reubence.com) - Reuben Rapose's Digital Garden
--   [axolo.co/blog](https://axolo.co/blog) - Engineering management news & axolo.co updates (with image preview for article in the home page)
--   [musing.vercel.app](https://musing.vercel.app/) - Parth Desai's personal blog ([source code](https://github.com/pycoder2000/blog))
--   [onyourmental.com](https://www.onyourmental.com/) - [Curtis Warcup's](https://github.com/Cwarcup) website for the On Your Mental Podcast ([source code](https://github.com/Cwarcup/on-your-mental))
--   [cwarcup.com](https://www.cwarcup.com/) - Curtis Warcup's personal website and blog ([source code](https://github.com/Cwarcup/personal-blog)).
--   [ondiek-elijah.me](https://www.ondiek-elijah.me/) - Ondiek Elijah's website and blog ([source code](https://github.com/Dev-Elie/ondiek-elijah)).
--   [jmalvarez.dev](https://www.jmalvarez.dev/) - José Miguel Álvarez's personal blog ([source code](https://github.com/josemiguel-alvarez/nextjs-blog))
--   [justingosses.com](https://justingosses.com/) - Justin Gosses's personal website and blog ([source code](https://github.com/JustinGOSSES/justingosses-website))
--   [https://bitoflearning-9a57.fly.dev/](https://bitoflearning-9a57.fly.dev/) - Sangeet Agarwal's personal blog, replatformed to [remix](https://remix.run/remix) using the [indie stack](https://github.com/remix-run/indie-stack) ([source code](https://github.com/SangeetAgarwal/bitoflearning))
--   [raphaelchelly.com](https://www.raphaelchelly.com/) - Raphaël Chelly's personal website and blog ([source code](https://github.com/raphaelchelly/raph_www))
--   [kaveh.page](https://kaveh.page) - Kaveh Tehrani's personal blog. Added tags directory, profile card, time-to-read on posts directory, etc.
+- [Aloisdg's cookbook](https://tambouille.vercel.app/) - with pictures and recipes!
+- [GautierArcin's demo with next translate](https://tailwind-nextjs-starter-blog-seven.vercel.app/) - includes translation of mdx posts, [source code](https://github.com/GautierArcin/tailwind-nextjs-starter-blog/tree/demo/next-translate)
+- [David Levai's digital garden](https://davidlevai.com/) - customized design and added email subscriptions
+- [Leo's Blog](https://leohuynh.dev) - Tuan Anh Huynh's personal site. Add Snippets Page, Author Profile Card, Image Lightbox, ...
+- [thvu.dev](https://thvu.dev) - Added `mdx-embed`, view count, reading minutes and more.
+- [irvin.dev](https://www.irvin.dev/) - Irvin Lin's personal site. Added YouTube embedding.
+- [KirillSo.com](https://www.kirillso.com/) - Personal blog & website.
+- [slightlysharpe.com](https://slightlysharpe.com) - [Tincre's](https://tincre.com) main company blog
+- [blog.b00st.com](https://blog.b00st.com) - [b00st.com's](https://b00st.com) main music promotion blog
+- [astrosaurus.me](https://astrosaurus.me/) - Ephraim Atta-Duncan's Personal Blog
+- [dhanrajsp.me](https://dhanrajsp.me/) - Dhanraj's personal site and blog.
+- [blog.r00ks.io](https://blog.r00ks.io/) - Austin Rooks's personal blog ([source code](https://github.com/Austionian/blog.r00ks)).
+- [honghong.me](https://honghong.me) - Tszhong's personal website ([source code](https://github.com/tszhong0411/home))
+- [marceloformentao.dev](https://marceloformentao.dev) - Marcelo Formentão personal website ([source code](https://github.com/marceloavf/marceloformentao.dev)).
+- [abiraja.com](https://www.abiraja.com/) - with a [runnable JS code snippet component!](https://www.abiraja.com/blog/querying-solana-blockchain)
+- [bpiggin.com](https://www.bpiggin.com) - Ben Piggin's personal blog
+- [maqib.cn](https://maqib.cn) - A blog of Chinese front-end developers 狂奔小马的博客 ([源码](https://github.com/maqi1520/nextjs-tailwind-blog))
+- [ambilena.com](https://ambilena.com/) - Electronic Music Blog & imprint for upcoming musicians.
+- [dalelarroder.com](https://dalelarroder.com) - Dale Larroder's personal website and blog ([source code](https://github.com/dlarroder/dalelarroder))
+- [0xchai.io](https://0xchai.io) - Chai's personal blog
+- [techipedia](https://techipedia.vercel.app) - Simple blogging progressive web app with custom installation button and top progress bar
+- [reubence.com](https://reubence.com) - Reuben Rapose's Digital Garden
+- [axolo.co/blog](https://axolo.co/blog) - Engineering management news & axolo.co updates (with image preview for article in the home page)
+- [musing.vercel.app](https://musing.vercel.app/) - Parth Desai's personal blog ([source code](https://github.com/pycoder2000/blog))
+- [onyourmental.com](https://www.onyourmental.com/) - [Curtis Warcup's](https://github.com/Cwarcup) website for the On Your Mental Podcast ([source code](https://github.com/Cwarcup/on-your-mental))
+- [cwarcup.com](https://www.cwarcup.com/) - Curtis Warcup's personal website and blog ([source code](https://github.com/Cwarcup/personal-blog)).
+- [ondiek-elijah.me](https://www.ondiek-elijah.me/) - Ondiek Elijah's website and blog ([source code](https://github.com/Dev-Elie/ondiek-elijah)).
+- [jmalvarez.dev](https://www.jmalvarez.dev/) - José Miguel Álvarez's personal blog ([source code](https://github.com/josemiguel-alvarez/nextjs-blog))
+- [justingosses.com](https://justingosses.com/) - Justin Gosses's personal website and blog ([source code](https://github.com/JustinGOSSES/justingosses-website))
+- [https://bitoflearning-9a57.fly.dev/](https://bitoflearning-9a57.fly.dev/) - Sangeet Agarwal's personal blog, replatformed to [remix](https://remix.run/remix) using the [indie stack](https://github.com/remix-run/indie-stack) ([source code](https://github.com/SangeetAgarwal/bitoflearning))
+- [raphaelchelly.com](https://www.raphaelchelly.com/) - Raphaël Chelly's personal website and blog ([source code](https://github.com/raphaelchelly/raph_www))
+- [kaveh.page](https://kaveh.page) - Kaveh Tehrani's personal blog. Added tags directory, profile card, time-to-read on posts directory, etc.
 
 ## Motivation
 
@@ -78,41 +78,41 @@ I wanted it to be nearly as feature-rich as popular blogging templates like [bea
 
 ## Features
 
--   Next.js with Typescript
--   [Contentlayer](https://www.contentlayer.dev/) to manage content logic
--   Easy styling customization with [Tailwind 3.0](https://tailwindcss.com/blog/tailwindcss-v3) and primary color attribute
--   [MDX - write JSX in markdown documents!](https://mdxjs.com/)
--   Near perfect lighthouse score - [Lighthouse report](https://www.webpagetest.org/result/230805_BiDcBQ_4H7)
--   Lightweight, 85kB first load JS
--   Mobile-friendly view
--   Light and dark theme
--   Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
--   Integration with [pliny](https://github.com/timlrx/pliny) that provides:
-    -   Multiple analytics options including [Umami](https://umami.is/), [Plausible](https://plausible.io/), [Simple Analytics](https://simpleanalytics.com/), Posthog and Google Analytics
-    -   Comments via [Giscus](https://github.com/laymonage/giscus), [Utterances](https://github.com/utterance/utterances) or Disqus
-    -   Newsletter API and component with support for Mailchimp, Buttondown, Convertkit, Klaviyo, Revue, and Emailoctopus
-    -   Command palette search with [Kbar](https://github.com/timc1/kbar) or Algolia
--   Server-side syntax highlighting with line numbers and line highlighting via [rehype-prism-plus](https://github.com/timlrx/rehype-prism-plus)
--   Math display supported via [KaTeX](https://katex.org/)
--   Citation and bibliography support via [rehype-citation](https://github.com/timlrx/rehype-citation)
--   Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
--   Support for tags - each unique tag will be its own page
--   Support for multiple authors
--   3 different blog layouts
--   2 different blog listing layouts
--   Support for nested routing of blog posts
--   Projects page
--   Preconfigured security headers
--   SEO friendly with RSS feed, sitemaps and more!
+- Next.js with Typescript
+- [Contentlayer](https://www.contentlayer.dev/) to manage content logic
+- Easy styling customization with [Tailwind 3.0](https://tailwindcss.com/blog/tailwindcss-v3) and primary color attribute
+- [MDX - write JSX in markdown documents!](https://mdxjs.com/)
+- Near perfect lighthouse score - [Lighthouse report](https://www.webpagetest.org/result/230805_BiDcBQ_4H7)
+- Lightweight, 85kB first load JS
+- Mobile-friendly view
+- Light and dark theme
+- Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
+- Integration with [pliny](https://github.com/timlrx/pliny) that provides:
+  - Multiple analytics options including [Umami](https://umami.is/), [Plausible](https://plausible.io/), [Simple Analytics](https://simpleanalytics.com/), Posthog and Google Analytics
+  - Comments via [Giscus](https://github.com/laymonage/giscus), [Utterances](https://github.com/utterance/utterances) or Disqus
+  - Newsletter API and component with support for Mailchimp, Buttondown, Convertkit, Klaviyo, Revue, and Emailoctopus
+  - Command palette search with [Kbar](https://github.com/timc1/kbar) or Algolia
+- Server-side syntax highlighting with line numbers and line highlighting via [rehype-prism-plus](https://github.com/timlrx/rehype-prism-plus)
+- Math display supported via [KaTeX](https://katex.org/)
+- Citation and bibliography support via [rehype-citation](https://github.com/timlrx/rehype-citation)
+- Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
+- Support for tags - each unique tag will be its own page
+- Support for multiple authors
+- 3 different blog layouts
+- 2 different blog listing layouts
+- Support for nested routing of blog posts
+- Projects page
+- Preconfigured security headers
+- SEO friendly with RSS feed, sitemaps and more!
 
 ## Sample posts
 
--   [A markdown guide](https://tailwind-nextjs-starter-blog.vercel.app/blog/github-markdown-guide)
--   [Learn more about images in Next.js](https://tailwind-nextjs-starter-blog.vercel.app/blog/guide-to-using-images-in-nextjs)
--   [A tour of math typesetting](https://tailwind-nextjs-starter-blog.vercel.app/blog/deriving-ols-estimator)
--   [Simple MDX image grid](https://tailwind-nextjs-starter-blog.vercel.app/blog/pictures-of-canada)
--   [Example of long prose](https://tailwind-nextjs-starter-blog.vercel.app/blog/the-time-machine)
--   [Example of Nested Route Post](https://tailwind-nextjs-starter-blog.vercel.app/blog/nested-route/introducing-multi-part-posts-with-nested-routing)
+- [A markdown guide](https://tailwind-nextjs-starter-blog.vercel.app/blog/github-markdown-guide)
+- [Learn more about images in Next.js](https://tailwind-nextjs-starter-blog.vercel.app/blog/guide-to-using-images-in-nextjs)
+- [A tour of math typesetting](https://tailwind-nextjs-starter-blog.vercel.app/blog/deriving-ols-estimator)
+- [Simple MDX image grid](https://tailwind-nextjs-starter-blog.vercel.app/blog/pictures-of-canada)
+- [Example of long prose](https://tailwind-nextjs-starter-blog.vercel.app/blog/the-time-machine)
+- [Example of Nested Route Post](https://tailwind-nextjs-starter-blog.vercel.app/blog/nested-route/introducing-multi-part-posts-with-nested-routing)
 
 ## Quick Start Guide
 
@@ -175,8 +175,8 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 
 `layouts` - main templates used in pages:
 
--   There are currently 3 post layouts available: `PostLayout`, `PostSimple` and `PostBanner`. `PostLayout` is the default 2 column layout with meta and author information. `PostSimple` is a simplified version of `PostLayout`, while `PostBanner` features a banner image.
--   There are 2 blog listing layouts: `ListLayout`, the layout used in version 1 of the template with a search bar and `ListLayoutWithTags`, currently used in version 2, which omits the search bar but includes a sidebar with information on the tags.
+- There are currently 3 post layouts available: `PostLayout`, `PostSimple` and `PostBanner`. `PostLayout` is the default 2 column layout with meta and author information. `PostSimple` is a simplified version of `PostLayout`, while `PostBanner` features a banner image.
+- There are 2 blog listing layouts: `ListLayout`, the layout used in version 1 of the template with a search bar and `ListLayoutWithTags`, currently used in version 2, which omits the search bar but includes a sidebar with information on the tags.
 
 `app` - pages to route to. Read the [Next.js documentation](https://nextjs.org/docs/app) for more information.
 
@@ -238,18 +238,18 @@ See [Next.js on Netlify](https://docs.netlify.com/integrations/frameworks/next-j
 2. Comment out `headers()` from `next.config.js`.
 3. Change `components/Image.tsx` to use a standard `<img>` tag instead of `next/image`:
 
-    ```ts
-    /* eslint-disable jsx-a11y/alt-text */
-    /* eslint-disable @next/next/no-img-element */
-    import NextImage, { ImageProps } from 'next/image'
+   ```ts
+   /* eslint-disable jsx-a11y/alt-text */
+   /* eslint-disable @next/next/no-img-element */
+   import NextImage, { ImageProps } from 'next/image'
 
-    // @ts-ignore
-    const Image = ({ ...rest }: ImageProps) => <img {...rest} />
+   // @ts-ignore
+   const Image = ({ ...rest }: ImageProps) => <img {...rest} />
 
-    export default Image
-    ```
+   export default Image
+   ```
 
-    Alternatively, to continue using `next/image`, you can use an alternative image optimization provider such as Imgix, Cloudinary or Akamai. See [image optimization documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#image-optimization) for more details.
+   Alternatively, to continue using `next/image`, you can use an alternative image optimization provider such as Imgix, Cloudinary or Akamai. See [image optimization documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#image-optimization) for more details.
 
 4. Remove `api` folder and components which call the server-side function such as the Newsletter component. Not technically required and the site will build successfully, but the APIs cannot be used as they are server-side functions.
 5. Run `yarn build`. The generated static content is in the `out` folder.
@@ -270,7 +270,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 const DonutChart = ({ data }) => {
-    return <Doughnut data={data} />
+  return <Doughnut data={data} />
 }
 
 export default Doughnut
@@ -300,24 +300,24 @@ You can now use the component in `.mdx` files:
 ## Example Donut Chart
 
 export const data = {
-    labels: ['Red', 'Blue', 'Yellow'],
-    datasets: [
-        {
-            label: '# of Votes',
-            data: [12, 19, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-            ],
-            borderWidth: 1,
-        },
-    ],
+  labels: ['Red', 'Blue', 'Yellow'],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [12, 19, 3],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+      ],
+      borderWidth: 1,
+    },
+  ],
 }
 
 <DonutChart data={data} />
@@ -340,44 +340,44 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from 'contentlayer/generated'
 
 export const SearchProvider = ({ children }) => {
-    const router = useRouter()
-    return (
-        <KBarSearchProvider
-            kbarConfig={{
-                searchDocumentsPath: 'search.json',
-                defaultActions: [
-                    {
-                        id: 'homepage',
-                        name: 'Homepage',
-                        keywords: '',
-                        shortcut: ['h', 'h'],
-                        section: 'Home',
-                        perform: () => router.push('/'),
-                    },
-                    {
-                        id: 'projects',
-                        name: 'Projects',
-                        keywords: '',
-                        shortcut: ['p'],
-                        section: 'Home',
-                        perform: () => router.push('/projects'),
-                    },
-                ],
-                onSearchDocumentsLoad(json) {
-                    return json.map((post: CoreContent<Blog>) => ({
-                        id: post.path,
-                        name: post.title,
-                        keywords: post?.summary || '',
-                        section: 'Blog',
-                        subtitle: post.tags.join(', '),
-                        perform: () => router.push(post.path),
-                    }))
-                },
-            }}
-        >
-            {children}
-        </KBarSearchProvider>
-    )
+  const router = useRouter()
+  return (
+    <KBarSearchProvider
+      kbarConfig={{
+        searchDocumentsPath: 'search.json',
+        defaultActions: [
+          {
+            id: 'homepage',
+            name: 'Homepage',
+            keywords: '',
+            shortcut: ['h', 'h'],
+            section: 'Home',
+            perform: () => router.push('/'),
+          },
+          {
+            id: 'projects',
+            name: 'Projects',
+            keywords: '',
+            shortcut: ['p'],
+            section: 'Home',
+            perform: () => router.push('/projects'),
+          },
+        ],
+        onSearchDocumentsLoad(json) {
+          return json.map((post: CoreContent<Blog>) => ({
+            id: post.path,
+            name: post.title,
+            keywords: post?.summary || '',
+            section: 'Blog',
+            subtitle: post.tags.join(', '),
+            perform: () => router.push(post.path),
+          }))
+        },
+      }}
+    >
+      {children}
+    </KBarSearchProvider>
+  )
 }
 ```
 

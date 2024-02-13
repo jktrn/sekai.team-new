@@ -7,10 +7,10 @@ import CountryFlag from './CountryFlag'
 import Tweet from './Tweet'
 
 export const components: MDXComponents = {
-    Image,
-    TOCInline,
-    a: CustomLink,
-    pre: Pre,
-    CountryFlag,
-    Tweet,
+  Image,
+  TOCInline,
+  a: CustomLink,
+  pre: Pre,
+  CountryFlag,
+  Tweet,
 }

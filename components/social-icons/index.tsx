@@ -13,44 +13,44 @@ import Codeforces from './codeforces.svg'
 // Icons taken from: https://simpleicons.org/
 
 const components = {
-    mail: Mail,
-    github: Github,
-    facebook: Facebook,
-    youtube: Youtube,
-    linkedin: Linkedin,
-    twitter: Twitter,
-    ctftime: CTFTime,
-    discord: Discord,
-    hackerearth: HackerEarth,
-    codeforces: Codeforces,
-    web: Web,
+  mail: Mail,
+  github: Github,
+  facebook: Facebook,
+  youtube: Youtube,
+  linkedin: Linkedin,
+  twitter: Twitter,
+  ctftime: CTFTime,
+  discord: Discord,
+  hackerearth: HackerEarth,
+  codeforces: Codeforces,
+  web: Web,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
-    if (
-        !href ||
-        (kind === 'mail' &&
-            !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href))
-    )
-        return null
+  if (
+    !href ||
+    (kind === 'mail' &&
+      !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href))
+  )
+    return null
 
-    const SocialSvg = components[kind]
+  const SocialSvg = components[kind]
 
-    return (
-        <a
-            className="text-sm text-foreground transition"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={href}
-        >
-            <span className="sr-only">
-                <span className="w-6">{kind}</span>
-            </span>
-            <SocialSvg
-                className={`fill-current text-foreground w-${size} h-${size} hover:text-primary`}
-            />
-        </a>
-    )
+  return (
+    <a
+      className="text-sm text-foreground transition"
+      target="_blank"
+      rel="noopener noreferrer"
+      href={href}
+    >
+      <span className="sr-only">
+        <span className="w-6">{kind}</span>
+      </span>
+      <SocialSvg
+        className={`fill-current text-foreground w-${size} h-${size} hover:text-primary`}
+      />
+    </a>
+  )
 }
 
 export default SocialIcon
