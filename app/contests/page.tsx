@@ -1,4 +1,6 @@
 import ContestCard from '@/components/ContestCard'
+import { DataTable } from '@/components/ui/data-table'
+import { columns } from '@/data/contestsColumns'
 import contestsData from '@/data/contestsData'
 import { genPageMetadata } from 'app/seo'
 import { groupBy } from 'lodash'
@@ -19,6 +21,7 @@ export default function Contests() {
           </p>
         </div>
         <div className="container py-12">
+          <DataTable data={contestsData} columns={columns} />
           {Object.entries(groupBy(contestsData, 'year'))
             .sort((a, b) => b[0].localeCompare(a[0]))
             .map(([year, contests]) => (

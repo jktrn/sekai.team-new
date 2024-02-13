@@ -40,7 +40,7 @@ export const columns: ColumnDef<Authors>[] = [
     cell: ({ row }) => {
       return (
         <TooltipProvider>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 p-4">
             <Avatar>
               <AvatarImage src={row.original.avatar} alt={row.original.name} />
               <AvatarFallback>{row.original.name.slice(0, 2)}</AvatarFallback>
@@ -98,7 +98,7 @@ export const columns: ColumnDef<Authors>[] = [
     },
     cell: ({ row }) => {
       return (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 p-4">
           {row.original.specialties &&
             row.original.specialties.map((specialty) => {
               const IconComponent = specialtyIcons[specialty.toLowerCase()]
@@ -167,7 +167,7 @@ export const columns: ColumnDef<Authors>[] = [
         }
       )
 
-      return <p className="text-muted-foreground">{joinDate}</p>
+      return <p className="p-4 text-muted-foreground">{joinDate}</p>
     },
   },
   {
