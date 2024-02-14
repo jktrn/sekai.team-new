@@ -110,6 +110,9 @@ module.exports = {
             h3: {
               fontWeight: '600',
             },
+            'h1,h2,h3,h4,h5,h6': {
+              color: theme('colors.foreground'),
+            },
             pre: {
               fontSize: '1rem !important',
             },
