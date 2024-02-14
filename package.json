@@ -9,7 +9,8 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -29,6 +30,7 @@
     "contentlayer": "0.3.4",
     "dom-to-image": "^2.6.0",
     "esbuild": "0.18.11",
+    "geist": "^1.2.2",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
