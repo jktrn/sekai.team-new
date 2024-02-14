@@ -2,18 +2,20 @@ import Link from 'next/link'
 import { slug } from 'github-slugger'
 import { Badge } from './ui/badge'
 import clsx from 'clsx'
-import { specialtyColors } from '@/scripts/utils'
+import { specialtyColors, specialtyIcons } from '@/scripts/utils'
 
 interface Props {
   text: string
 }
 
 const Tag = ({ text }: Props) => {
+  const IconComponent = specialtyIcons[text.toLowerCase()]
+
   return (
     <Link href={`/tags/${slug(text)}`}>
       <Badge
         className={clsx(
-          'mb-1 mr-1 font-normal uppercase text-foreground',
+          'mb-1 mr-1 font-normal text-foreground',
           specialtyColors[text.toLowerCase()]
             ? `bg-${specialtyColors[text.toLowerCase()]}-300 dark:bg-${
                 specialtyColors[text.toLowerCase()]
@@ -21,7 +23,8 @@ const Tag = ({ text }: Props) => {
             : 'bg-secondary'
         )}
       >
-        {text.split(' ').join('-')}
+        {IconComponent && <IconComponent className="mr-1 h-4 w-4" />}
+        {text}
       </Badge>
     </Link>
   )

@@ -23,21 +23,24 @@ import {
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  isMemberTable?: boolean
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  isMemberTable,
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([
-    { id: 'joinDate', desc: false },
-  ])
+  const [sorting, setSorting] = React.useState<SortingState>(
+    isMemberTable ? [{ id: 'joinDate', desc: false }] : []
+  )
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
+    enableSortingRemoval: true,
     getSortedRowModel: getSortedRowModel(),
     state: {
       sorting,

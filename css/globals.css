@@ -106,7 +106,3 @@
   .block.border-t.border-gray-100 {
   @apply border-t-border text-muted-foreground;
 }
-
-.ribbon {
-  @apply bg-blue-400 p-4 [clip-path:polygon(0%_0%,_100%_0%,_calc(100%_-_20px)_50%,_100%_100%,_0%_100%)];
-}

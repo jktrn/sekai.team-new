@@ -30,7 +30,7 @@ const MembersTable = () => {
         />
         <p className="text-sm text-muted-foreground">Show retired members</p>
       </div>
-      <DataTable columns={columns} data={filteredAuthors} />
+      <DataTable columns={columns} data={filteredAuthors} isMemberTable />
     </>
   )
 }

@@ -29,6 +29,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        mono: ['var(--font-fira-code)', ...fontFamily.mono],
       },
       colors: {
         gray: colors.gray,
@@ -138,6 +139,7 @@ module.exports = {
     },
   },
   safelist: [
+    // Category specialties
     'bg-rose-300',
     'dark:bg-rose-700',
     'bg-orange-300',
@@ -154,6 +156,33 @@ module.exports = {
     'dark:bg-fuchsia-700',
     'bg-gray-300',
     'dark:bg-gray-700',
+    // Ribbon in /contests
+    'bg-gradient-to-r',
+    'dark:from-yellow-500',
+    'dark:to-yellow-700',
+    'dark:from-rose-700',
+    'dark:to-rose-900',
+    'dark:from-gray-400',
+    'dark:to-gray-600',
+    'from-yellow-300',
+    'to-yellow-400',
+    'from-rose-300',
+    'to-rose-400',
+    'from-gray-300',
+    'to-gray-400',
+    '[clip-path:polygon(0%_0%,_100%_0%,_calc(100%_-_20px)_50%,_100%_100%,_0%_100%)]',
+    // Table adjustments
+    '-ml-4',
+    '-mr-4',
+    '-mt-1',
+    'text-right',
+    'bg-cyan-300',
+    'dark:bg-cyan-800',
+    'bg-emerald-300',
+    'dark:bg-emerald-800',
+    'whitespace-nowrap',
+    'xl:flex-row',
+    'ml-4',
   ],
   plugins: [
     require('@tailwindcss/forms'),

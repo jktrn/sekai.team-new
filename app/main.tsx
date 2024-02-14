@@ -39,6 +39,7 @@ export default function Home({ posts }) {
           <p className="text-center text-lg leading-7 text-muted-foreground">
             <code
               aria-label={`Project SEKAI is a CTF team with over ${currentMembers} members and has participated in over ${contestsData.length} contests.`}
+              className="font-mono"
             >
               {`SEKAI{I5_\u200BA_\u200BCTF_\u200Bt3Am_\u200Bw/_\u200B${currentMembers}+_\u200BmbRs_\u200B&_\u200Bp4r71CiP4tEd_\u200Bin_\u200B${contestsData.length}+_\u200Bc0nt3Stz}`}
             </code>
@@ -67,16 +68,39 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-muted-foreground">
+                      <dd className="text-sm leading-6 text-muted-foreground">
                         <time dateTime={date as string}>
                           {formatDate(date as string)}
                         </time>
+                        {finalAuthorDetails.name !== siteMetadata.author ? (
+                          <div className="flex items-center gap-1">
+                            {' by '}
+                            <Image
+                              src={finalAuthorDetails.avatar}
+                              alt={finalAuthorDetails.name}
+                              width={24}
+                              height={24}
+                              className="rounded-full"
+                            />
+
+                            <Link
+                              href={`/members/${finalAuthorDetails.slug}`}
+                              className="text-foreground hover:underline"
+                            >
+                              {finalAuthorDetails.name}
+                            </Link>
+                          </div>
+                        ) : (
+                          <span className="pl-2 pr-1 text-foreground">
+                            by {finalAuthorDetails.name}
+                          </span>
+                        )}
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="text-xl font-semibold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-foreground"
@@ -85,28 +109,6 @@ export default function Home({ posts }) {
                             </Link>
                           </h2>
                           <div className="flex flex-wrap items-center">
-                            <Image
-                              src={finalAuthorDetails.avatar}
-                              alt={finalAuthorDetails.name}
-                              width={24}
-                              height={24}
-                              className="rounded-full"
-                            />
-                            {finalAuthorDetails.name !== siteMetadata.author ? (
-                              <Link
-                                href={`/members/${finalAuthorDetails.slug}`}
-                                className="pl-2 pr-1 text-primary"
-                              >
-                                {finalAuthorDetails.name}
-                              </Link>
-                            ) : (
-                              <span className="pl-2 pr-1 text-primary">
-                                {finalAuthorDetails.name}
-                              </span>
-                            )}
-                            <span className="pr-1 text-muted-foreground">
-                              –
-                            </span>
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}

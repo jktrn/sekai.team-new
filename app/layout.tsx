@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'css/globals.css'
 import 'pliny/search/algolia.css'
 
-import { Inter } from 'next/font/google'
+import { Inter, Fira_Code } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -12,10 +12,16 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
-const space_grotesk = Inter({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+})
+
+const fira = Fira_Code({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fira-code',
 })
 
 export const metadata: Metadata = {
@@ -66,7 +72,7 @@ export default function RootLayout({
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${inter.variable} ${fira.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link

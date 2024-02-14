@@ -20,8 +20,10 @@ export default function Contests() {
             CTFs we have participated in.
           </p>
         </div>
-        <div className="container py-12">
+        <div className="container hidden py-12 md:block">
           <DataTable data={contestsData} columns={columns} />
+        </div>
+        <div className="container block py-12 md:hidden">
           {Object.entries(groupBy(contestsData, 'year'))
             .sort((a, b) => b[0].localeCompare(a[0]))
             .map(([year, contests]) => (

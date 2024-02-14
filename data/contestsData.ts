@@ -8,6 +8,8 @@ export interface ContestData {
   isMerger?: boolean
   startDate?: string
   endDate?: string
+  onSite?: boolean
+  location?: string
   year: number
 }
 
@@ -73,6 +75,8 @@ const contestsData: ContestData[] = [
     ctfPoints: 1990,
     ctftimeRating: 18.711,
     isMerger: true,
+    onSite: true,
+    location: 'Tokyo, Japan',
     year: 2023,
     startDate: '2023-12-23T01:00:00+00:00',
     endDate: '2023-12-24T09:00:00+00:00',
@@ -116,6 +120,7 @@ const contestsData: ContestData[] = [
     name: 'CTFZone 2023 Final',
     ctfPoints: 3833,
     ctftimeRating: 0,
+    onSite: true,
     year: 2023,
     startDate: '2023-11-25T09:00:00+00:00',
     endDate: '2023-11-25T19:00:00+00:00',
@@ -188,6 +193,8 @@ const contestsData: ContestData[] = [
     ctfPoints: 10710,
     ctftimeRating: 35.357,
     isMerger: true,
+    onSite: true,
+    location: 'Taipei, Taiwan',
     year: 2023,
     startDate: '2023-11-14T00:00:00+00:00',
     endDate: '2023-11-15T08:00:00+00:00',
@@ -230,6 +237,7 @@ const contestsData: ContestData[] = [
     writeupTag: 'bricsctf-quals-2023',
     ctfPoints: 4745,
     ctftimeRating: 49.36,
+    onSite: true,
     year: 2023,
     startDate: '2023-09-24T10:00:00+00:00',
     endDate: '2023-09-25T10:00:00+00:00',
@@ -281,6 +289,7 @@ const contestsData: ContestData[] = [
     name: 'ESCAPE CTF 2023 Preliminary',
     ctfPoints: 2680,
     ctftimeRating: 0,
+    onSite: true,
     year: 2023,
     startDate: '2023-08-05T01:00:00+00:00',
     endDate: '2023-08-05T09:00:00+00:00',
@@ -292,6 +301,8 @@ const contestsData: ContestData[] = [
     ctfPoints: 3776,
     ctftimeRating: 19.039,
     isMerger: true,
+    onSite: true,
+    location: 'Seoul, South Korea',
     year: 2023,
     startDate: '2023-09-25T07:00:00+00:00',
     endDate: '2023-09-26T07:00:00+00:00',

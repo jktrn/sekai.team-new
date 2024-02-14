@@ -112,7 +112,7 @@ export default function ListLayout({
             <Search className="absolute right-3 top-3 h-5 w-5 text-muted-foreground" />
           </div>
         </div>
-        <ul>
+        <ul className="pt-4">
           {!filteredBlogPosts.length && (
             <div className="mt-4 text-muted-foreground">No posts found.</div>
           )}
@@ -136,20 +136,12 @@ export default function ListLayout({
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-muted-foreground">
+                    <dd className="text-sm font-medium leading-6 text-muted-foreground">
                       <time dateTime={date}>
                         {formatDate(date, siteMetadata.locale)}
                       </time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-3 xl:col-span-3">
-                    <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/${path}`} className="text-foreground">
-                          {title}
-                        </Link>
-                      </h3>
-                      <div className="flex flex-wrap items-center">
+                      <div className="flex items-center gap-1">
+                        {' by '}
                         <Image
                           src={finalAuthorDetails.avatar}
                           alt={finalAuthorDetails.name}
@@ -157,13 +149,24 @@ export default function ListLayout({
                           height={24}
                           className="rounded-full"
                         />
+
                         <Link
                           href={`/members/${finalAuthorDetails.slug}`}
-                          className="pl-2 pr-1 text-primary"
+                          className="text-foreground hover:underline"
                         >
                           {finalAuthorDetails.name}
                         </Link>
-                        <span className="pr-1 text-muted-foreground">–</span>
+                      </div>
+                    </dd>
+                  </dl>
+                  <div className="space-y-3 xl:col-span-3">
+                    <div>
+                      <h3 className="text-2xl font-semibold leading-8 tracking-tight">
+                        <Link href={`/${path}`} className="text-foreground">
+                          {title}
+                        </Link>
+                      </h3>
+                      <div className="flex flex-wrap items-center">
                         {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                       </div>
                     </div>

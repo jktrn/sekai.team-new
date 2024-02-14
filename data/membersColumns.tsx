@@ -25,7 +25,7 @@ export const columns: ColumnDef<Authors>[] = [
         <Button
           variant="ghost"
           className="-ml-4 hover:bg-background"
-          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          onClick={() => column.toggleSorting()}
         >
           <div className="flex items-center gap-1">
             <p>Name</p>
@@ -41,8 +41,11 @@ export const columns: ColumnDef<Authors>[] = [
       return (
         <TooltipProvider>
           <div className="flex items-center gap-4 p-4">
+            {/* @ts-ignore */}
             <Avatar>
+              {/* @ts-ignore */}
               <AvatarImage src={row.original.avatar} alt={row.original.name} />
+              {/* @ts-ignore */}
               <AvatarFallback>{row.original.name.slice(0, 2)}</AvatarFallback>
             </Avatar>
 
@@ -53,17 +56,21 @@ export const columns: ColumnDef<Authors>[] = [
                 </Link>
                 {row.original.isCaptain && (
                   <Tooltip>
+                    {/* @ts-ignore */}
                     <TooltipTrigger asChild>
                       <Crown size={16} />
                     </TooltipTrigger>
+                    {/* @ts-ignore */}
                     <TooltipContent>Captain</TooltipContent>
                   </Tooltip>
                 )}
                 {row.original.retired && (
                   <Tooltip>
+                    {/* @ts-ignore */}
                     <TooltipTrigger asChild>
                       <GraduationCap size={16} />
                     </TooltipTrigger>
+                    {/* @ts-ignore */}
                     <TooltipContent>Retired</TooltipContent>
                   </Tooltip>
                 )}
@@ -84,7 +91,7 @@ export const columns: ColumnDef<Authors>[] = [
         <Button
           variant="ghost"
           className="-ml-4 hover:bg-background"
-          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          onClick={() => column.toggleSorting()}
         >
           <div className="flex items-center gap-1">
             <p>Specialties</p>
@@ -145,7 +152,7 @@ export const columns: ColumnDef<Authors>[] = [
         <Button
           variant="ghost"
           className="-ml-4 hover:bg-background"
-          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          onClick={() => column.toggleSorting()}
         >
           <div className="flex items-center gap-1">
             <p>Join Date</p>
