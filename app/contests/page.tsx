@@ -21,7 +21,10 @@ export default function Contests() {
           </p>
         </div>
         <div className="container hidden py-12 md:block">
-          <DataTable data={contestsData} columns={columns} />
+          <DataTable
+            data={contestsData.filter((d) => d.place <= 25)}
+            columns={columns}
+          />
         </div>
         <div className="container block py-12 md:hidden">
           {Object.entries(groupBy(contestsData, 'year'))

@@ -179,7 +179,7 @@ export const columns: ColumnDef<ContestData>[] = [
       const [open, setOpen] = useState(false)
 
       return (
-        <div className="flex justify-between p-4">
+        <div className="flex justify-between px-4">
           <ContestSocial
             open={open}
             setOpen={setOpen}
@@ -187,8 +187,15 @@ export const columns: ColumnDef<ContestData>[] = [
             name={row.original.name}
             ctfPoints={row.original.ctfPoints}
           />
-          <div className="flex flex-col items-center justify-center gap-1">
-            <DropdownMenu>
+          <div className="flex flex-col items-center justify-center">
+            {row.original.writeupTag && (
+              <Link href={`/tags/${row.original.writeupTag}`}>
+                <Button variant="ghost" className="h-fit w-fit p-2">
+                  <BookOpen size={16} />
+                </Button>
+              </Link>
+            )}
+            <DropdownMenu modal={false}>
               {/* @ts-ignore */}
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
@@ -201,17 +208,6 @@ export const columns: ColumnDef<ContestData>[] = [
                 {/* @ts-ignore */}
                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {row.original.writeupTag && (
-                  <Link href={`/tags/${row.original.writeupTag}`}>
-                    {/* @ts-ignore */}
-                    <DropdownMenuItem className="flex justify-between">
-                      View writeups
-                      <DropdownMenuShortcut>
-                        <BookOpen size={16} className="ml-4" />
-                      </DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                  </Link>
-                )}
                 {row.original.ctftimeId && (
                   <Link
                     href={`https://ctftime.org/event/${row.original.ctftimeId}`}
